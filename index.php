@@ -10,17 +10,17 @@ $nbElements = $tableElements->length;
 
 for ($i = 0; $i < $nbElements ; $i++) {
     if (preg_match("#^[1-9]{1}[0-9]{3}$#", $tableElements->item($i)->nodeValue)) {
-        $code_postaux[$tableElements->item($i)->nodeValue][] = $tableElements->item($i + 1)->nodeValue;// valeur
+        $codes_postaux[$tableElements->item($i)->nodeValue][] = $tableElements->item($i + 1)->nodeValue;// valeur
     }
 }
 
 // formatage et concaténation $row=array()
 
-$row = '<?php $code_postaux=array(';
-foreach ($code_postaux as $k => $v) {
+$row = '<?php $codes_postaux=array(';
+foreach ($codes_postaux as $k => $v) {
     $row .="'$k'=>array(";
     $i = 0;
-    foreach ($code_postaux[$k] as $value) {
+    foreach ($codes_postaux[$k] as $value) {
         $value=addslashes($value);
         $row .="$i=>'$value',";
         $i++;
