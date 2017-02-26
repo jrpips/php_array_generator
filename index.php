@@ -3,7 +3,7 @@
 // récupération des données sur le site bpost
 
 $doc = new DOMDocument;
-$doc->loadHTMLFile('http://www.bpost2.be/zipcodes/files/zipcodes_prov_fr.html?_ga=1.96820831.1334083198.1473325327');// source
+$doc->loadHTMLFile('http://www.bpost2.be/zipcodes/files/zipcodes_prov_fr.html');// source
 $tableElements = $doc->getElementsByTagName('td');// élément cible
 
 $nbElements = $tableElements->length;
