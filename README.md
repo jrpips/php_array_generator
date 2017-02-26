@@ -1,5 +1,5 @@
 
-<h1> Public Data must be free</h1>
+<h2> Public Data must be free</h2>
 <p>
     Collecteur des codes postaux et communes associées sous forme d'un tableau associatif.
 </p>
